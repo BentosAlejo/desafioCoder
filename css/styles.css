@@ -1,0 +1,323 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    background-color: lightsalmon;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/fondo1.jpg);
+    border-bottom: 2px solid black;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+a{
+    text-decoration: none;
+    background-color: lightcoral;
+    font-size: 5vh;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+}
+a:hover{
+    background-color: aqua;
+}
+button{
+    background-color: aquamarine;
+    font-size: 3vh;
+    border-radius: 10px;
+    width: 20vh;
+    border: 2px solid black;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: lightsalmon;
+}
+input{
+    width: 30vh;
+    background-color: lightsalmon;
+    border: 3px solid black;
+    border-radius: 3px;
+    color: black;
+    font-weight: bold;
+    margin: 5px;
+}
+img{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+textarea{
+    width: 30vh;
+    height: 40vh;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: 5px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/fondo1.jpg);
+    border-top: 2px solid black;
+}
+/* home */
+#sectionHome{
+    align-items: center;
+}
+#divHome{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 4vh;
+
+}
+#figureHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#imgHome{
+    width: 50vh;
+    height: 80vh;
+}
+#fcHome{
+    font-size: 4vh;
+    font-weight: bold;
+    margin-top: 3vh;
+}
+/* contacto */
+#formContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+#articleContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 4vh;
+}
+/* experiencias */
+#figureExperiencias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgE{
+    width: 40vh;
+    height: 40vh;
+    margin: 10px;
+}
+.figEx{
+    font-size: 4vh;
+    font-weight: bold;
+}
+/* menu */
+#imgMenu{
+    height: 200vh;
+}
+video{
+    height: 100vh;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#sectionMenu{
+    display: flex;
+    align-items: center;
+    font-size: 4vh;
+    font-weight: bold;
+}
+#figMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+#figMenu figcaption{
+    margin: 10px;
+}
+/* unite al equipo */
+#formTrabajo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+/* declaracion de areas */
+header{
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+}
+section{
+    grid-area: section;
+}
+footer{
+    grid-area: footer;
+}
+/* smartphone */
+@media(max-width:320px){
+    
+    body{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "section"
+        "footer";
+        grid-template-columns: 1fr;
+    }
+}  
+/* desktop */
+@media (min-width:1024px){
+    *{  margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "nav    header"
+        "nav    section"
+        "nav    section"
+        "footer footer";
+        grid-template-columns: 1fr 3fr;
+    }
+    ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* home */
+    #sectionHome{
+        display: grid;
+        grid-template-areas: 
+        "figHome somos"
+        "fighome horario";
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 20px;
+    }
+    #somos{
+        grid-area: somos;
+    }
+    #horario{
+        grid-area: horario;
+    }
+    #figureHome{
+        grid-area: figHome;
+    }
+    /* contacto */
+    #formContacto{
+        display: grid;
+        grid-template-areas: 
+        "texto nombre"
+        "texto apellido"
+        "texto enviar"
+        "texto reset";
+        grid-template-columns: 2fr 1fr;
+    }
+    .inputN{
+        grid-area: nombre;
+    }
+    .inputA{
+        grid-area: apellido;
+    }
+    .textA{
+        grid-area: texto;
+        width: 100vh;
+    }
+    .buttonEnviar{
+        grid-area: enviar;
+    }
+    .buttonReset{
+        grid-area: reset;
+    }
+    #articleContacto{
+        display: grid;
+        grid-template-areas: 
+        "iframe iframe llamadas"
+        "iframe iframe seguinos"
+        "iframe iframe pasate";
+        grid-template-columns: 2fr 1fr;
+        margin-left: 10px;
+    }
+    #llamadas{
+        grid-area: llamadas;
+    }
+    #seguinos{
+        grid-area: seguinos;
+    }
+    #pasate{
+        grid-area: pasate;
+    }
+    iframe{
+        grid-area: iframe;
+    }
+    /* experiencias */
+    #figureExperiencias{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    .figEx{
+        margin: 5px;
+    }
+    .imgE{
+        width: 200px;
+        height: 200px;
+    }
+    /* trabajo */
+    #formTrabajo{
+        width: 100%;
+        height: 50vh;
+        display: grid;
+        grid-template-areas: 
+        "carta nombre"
+        "carta apellido"
+        "carta enviar"
+        "carta reset"
+        "carta file";
+        grid-template-columns: 2fr 1fr;
+        margin-left: 10px;
+        gap: 5px;
+    }
+    #textC{
+        grid-area: carta;
+        border-radius: 5px;
+        width: 100vh;
+    }
+    #enviar{
+        grid-area: file;
+    }
+
+    
+}  
+
+
+
