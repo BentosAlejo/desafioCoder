@@ -6,28 +6,26 @@ header{
     background-color: lightsalmon;
 }
 nav{
-    display: flex;
-    justify-content: center;
+    display: block;
     background-image: url(../img/fondo1.jpg);
-    border-bottom: 2px solid black;
 }
 ul{
-    display: flex;
-    flex-direction: row;
+    list-style: none;
 }
 li{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+
 }
 a{
     text-decoration: none;
     background-color: lightcoral;
-    font-size: 5vh;
+    font-size: 1.5rem;
     border-radius: 5px;
     font-weight: bold;
     color: black;
-    padding: 10px;
+    padding: 1rem;
+    margin-top: 0.5rem;
 }
 a:hover{
     background-color: aqua;
@@ -45,7 +43,7 @@ section{
     background-color: lightsalmon;
 }
 input{
-    width: 30vh;
+    width: 10rem;
     background-color: lightsalmon;
     border: 3px solid black;
     border-radius: 3px;
@@ -56,6 +54,7 @@ input{
 img{
     border: 2px solid black;
     border-radius: 5px;
+    width: 100%;
 }
 textarea{
     width: 30vh;
@@ -72,31 +71,23 @@ footer{
     border-top: 2px solid black;
 }
 /* home */
-#sectionHome{
-    align-items: center;
-}
+
 #divHome{
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    font-size: 2rem;
     font-weight: bold;
-    font-size: 4vh;
-
 }
+
 #figureHome{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#imgHome{
-    width: 50vh;
-    height: 80vh;
-}
 #fcHome{
-    font-size: 4vh;
+    font-size: 2rem;
     font-weight: bold;
-    margin-top: 3vh;
+    margin-top: 1rem;
 }
 /* contacto */
 #formContacto{
@@ -121,9 +112,8 @@ footer{
     align-items: center;
 }
 .imgE{
-    width: 40vh;
-    height: 40vh;
-    margin: 10px;
+    width: 100%;
+    margin: 1rem;
 }
 .figEx{
     font-size: 4vh;
@@ -131,10 +121,10 @@ footer{
 }
 /* menu */
 #imgMenu{
-    height: 200vh;
+    width: 100%;
 }
 video{
-    height: 100vh;
+    width: 100%;
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -158,7 +148,7 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin: 2rem;
 }
 /* declaracion de areas */
 header{
@@ -195,7 +185,7 @@ footer{
     }
     body{
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: grid;
         grid-template-areas: 
         "nav    header"
@@ -204,10 +194,18 @@ footer{
         "footer footer";
         grid-template-columns: 1fr 3fr;
     }
+    nav{
+        display: flex;
+    }
     ul{
+        display: flex;
+        justify-content: space-between;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+    }
+    a{
+        text-decoration: none;
+        font-size: 2rem;
     }
     /* home */
     #sectionHome{
