@@ -3,7 +3,7 @@ header{
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid black;
-    background-color: lightsalmon;
+    background:linear-gradient(#e66465, #9198e5)
 }
 nav{
     display: block;
@@ -312,6 +312,12 @@ footer{
     }
     #enviar{
         grid-area: file;
+    }
+    a:hover{
+        transform: scale(1.5);
+    }
+    img:hover{
+        transform: translate(0.5rem,1rem);
     }
 
     
