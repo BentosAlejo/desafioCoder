@@ -125,6 +125,9 @@ footer{
     width: 100%;
 }
 /* menu */
+div.card{
+    margin-top: 1rem;
+}
 #imgMenu{
     width: 100%;
 }
@@ -147,7 +150,7 @@ video{
 }
 #figMenu figcaption{
     margin: 10px;
-}
+} 
 /* unite al equipo */
 #formTrabajo{
     display: flex;
