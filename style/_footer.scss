@@ -1,7 +1,33 @@
+// footer{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-image: url(../img/fondo1.jpg);
+//     border-top: 2px solid black;
+// }
+$border:4px;
+$black1:solid black;
+$Jalign:center;
+$display:flex;
+$pc:linux;
+$alineacion:true;
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/fondo1.jpg);
-    border-top: 2px solid black;
+    @if $alineacion{
+        background-image: url(../img/fondo1.jpg);
+        display: $display;
+        align-items: $Jalign;
+        justify-content: $Jalign;
+    }
+    border-top: $border/2;
+    @if $pc == windows{
+        border-top: green 5px solid;
+    }
+    @else if $pc == mac{
+        border-top: blue 10px dotted;
+    }
+    @else{
+        border-top: $black1;
+    }
 }
+
+
