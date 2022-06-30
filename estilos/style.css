@@ -196,6 +196,11 @@ div.card {
   width: 100%;
 }
 
+#imgMenu:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 video {
   width: 100%;
   border: 2px solid black;
